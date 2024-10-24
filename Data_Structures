@@ -1,0 +1,26 @@
+# Step 1: Create a tuple named table_tuple containing multiplication table 1 to 4
+table_tuple = (
+    (1, 2, 3, 4),
+    (2, 4, 6, 8),
+    (3, 6, 9, 12),
+    (4, 8, 12, 16)
+)
+
+# Step 2: Take 2 integer numbers from user
+row_index = int(input("Enter the row index (0-3): "))
+column_index = int(input("Enter the column index (0-3): "))
+
+# Step 3: Print out the result from table_tuple using the 2 integer values from input
+result = table_tuple[row_index][column_index]
+print("Result from table_tuple:", result)
+
+# Step 4: Print out the whole table
+print("Multiplication Table:")
+row = 0
+while row < 4:
+    column = 0
+    while column < 4:
+        print(f"{table_tuple[row][column]}\t", end="")
+        column += 1
+    print()  # Move to the next line after printing each row
+    row += 1
